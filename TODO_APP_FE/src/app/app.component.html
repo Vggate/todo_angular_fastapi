@@ -1,0 +1,17 @@
+<div class="todo-container">
+  <div class="d-flex flex-row justify-content-center align-items-center m-3">
+    <div class="col-lg-6 px-lg-2 px-0">
+      <div class="title">
+        <a class="mx-2 text-body" [routerLink]="['/']">TO-DO LIST</a>
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div class="content-container d-flex flex-column flex-lg-row justify-content-center">
+    <div class="col-lg-6 pb-3">
+      <div class="to-do-content">
+        <router-outlet/>
+      </div>
+    </div>
+  </div>
+</div>

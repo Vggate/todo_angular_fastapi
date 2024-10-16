@@ -1,0 +1,25 @@
+services:
+  fastapi:
+    build: ./TODO_APP_BE
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./TODO_APP_BE:/TODO_APP_BE
+    command: python main.py 
+    depends_on:
+      - angular
+
+  angular:
+    build: ./TODO_APP_FE
+    container_name: angular_app
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./TODO_APP_FE:/TODO_APP_FE
+      - /TODO_APP_FE/node_modules
+    command: ng serve TODO_APP_FE --host 0.0.0.0 --port 4200
+
+networks:
+  default:
+    driver: bridge
