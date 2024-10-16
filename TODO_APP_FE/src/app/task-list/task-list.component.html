@@ -18,19 +18,8 @@
         </div>
         <div class="px-0 mr-3">
           <button class="btn btn-outline-info" (click)="toggleShowComplete()">
-            {{ showCompleted ? "Hide Done" : "Show Done" }}
+            {{ showCompleted ? "Hide Completed" : "Show Completed" }}
           </button>
-        </div>
-        <div class="pr-3">
-          <div class="input-group">
-            <button class="btn btn-primary" type="button" (click)="sortByDueDate()"> Sort Date
-              @if (ascendingDueDate === false) {
-                <i class="fa fa-angle-up"></i>
-              } @else if (ascendingDueDate) {
-                <i class="fa fa-angle-down"></i>
-              }
-            </button>
-          </div>
         </div>
       </div>
 
@@ -38,8 +27,15 @@
 
       <!-- Task list -->
       <div class="row p-2 border-bottom h5 mb-0">
-        <div class="col-8 font-weight-bold">Task title</div>
-        <div class="col-2 font-weight-bold">Status</div>
+        <div class="col-5 font-weight-bold">Task title</div>
+        <div class="col-2 font-weight-bold text-center">Status</div>
+        <div id="due_date" class="col-4 font-weight-bold text-center" (click)="sortByDueDate()">Due date
+          @if (ascendingDueDate === false) {
+            <i class="fa fa-angle-up"></i>
+          } @else {
+            <i class="fa fa-angle-down"></i>
+          }
+        </div>
         <div class="col-2"></div>
       </div>
 

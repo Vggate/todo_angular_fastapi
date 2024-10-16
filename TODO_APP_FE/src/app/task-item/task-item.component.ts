@@ -5,11 +5,12 @@ import { take } from 'rxjs';
 
 import { TaskItem } from '../task-item'
 import { TaskService } from '../app.todo.service'
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-task-item',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, DatePipe],
   templateUrl: './task-item.component.html',
   styleUrl: './task-item.component.css'
 })
@@ -17,6 +18,7 @@ export class TaskItemComponent {
   editable = false;
   removeTask = output<number>();
   toggleTask = output<TaskItem>();
+  
   @Input() task!: TaskItem;
 
   constructor(private taskService: TaskService) {}
