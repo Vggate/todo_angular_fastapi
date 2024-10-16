@@ -41,3 +41,8 @@ Access with http://localhost:4200
 1. Install npm packages: `npm install`
 2. Start project: `npm run start`
 3. Access with http://localhost:4200
+
+
+#### Frontend testing
+1. Move to the root directory of the front-end source code
+2. Type command: `npm run test`
