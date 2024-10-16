@@ -30,3 +30,15 @@ docker compose up -d
 ```
 
 Access with http://localhost:4200
+
+### Run project without Docker
+#### For Backend:
+1. Create python env with command: `python -m venv .venv` or `python3 -m venv .venv`
+2. Active env: `.venv/Scripts/Active.ps1` or `source .venv/bin/active`
+3. Install package with command: `pip install -r requirements.txt`
+4. Run project: `fastapi dev main.py`
+
+#### For Frontend
+1. Install npm packages: `npm install`
+2. Start project: `npm run start`
+3. Access with http://localhost:4200
