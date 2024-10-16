@@ -16,8 +16,7 @@ For local development or debugging outside Docker, ensure you have compatible ve
 
 ## Installation
 
-1. Create .env file
-   Save a .env file in project's backend root directory with format for FastApi server
+1. If a .env file does not already exist in the root directory of the back-end source code, create one. Then, add the following two environment variables:
 ```bash
 ENVIRONMENT=<Evironment_name>           # accept one of values `production` or `development`. Default is `development`
 SERVER_INTERFACE=<Server_interface>     # Default is 127.0.0.1 for security (if you want to access server from other host, set to 0.0.0.0)
