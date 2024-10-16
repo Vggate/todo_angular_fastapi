@@ -29,14 +29,14 @@
       <div class="row p-2 border-bottom h5 mb-0">
         <div class="col-5 font-weight-bold">Task title</div>
         <div class="col-2 font-weight-bold text-center">Status</div>
-        <div id="due_date" class="col-4 font-weight-bold text-center" (click)="sortByDueDate()">Due date
+        <div id="due_date" class="col-3 font-weight-bold text-center" (click)="sortByDueDate()">Due date
           @if (ascendingDueDate === false) {
             <i class="fa fa-angle-up"></i>
           } @else {
             <i class="fa fa-angle-down"></i>
           }
         </div>
-        <div class="col-2"></div>
+        <div class="col-2 font-weight-bold">Action</div>
       </div>
 
       <div class="task-list-content mb-2" style="height: 50vh; overflow-y: auto; overflow-x: hidden;">
