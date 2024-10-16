@@ -33,7 +33,7 @@ Access with http://localhost:4200
 ### Run project without Docker
 #### For Backend:
 1. Create python env with command: `python -m venv .venv` or `python3 -m venv .venv`
-2. Active env: `.venv/Scripts/Active.ps1` or `source .venv/bin/active`
+2. Active env: `.venv/Scripts/Activate.ps1` or `source .venv/bin/activate`
 3. Install package with command: `pip install -r requirements.txt`
 4. Run project: `fastapi dev main.py`
 
